@@ -9,6 +9,17 @@ public class UserLogin {
 	private String senha;
 	
 	private String token;
+	
+	public UserLogin() {
+	}
+
+	public UserLogin(String nome, String email, String senha, String token) {
+		super();
+		this.nome = nome;
+		this.email = email;
+		this.senha = senha;
+		this.token = token;
+	}
 
 	public String getNome() {
 		return nome;

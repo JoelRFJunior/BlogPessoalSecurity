@@ -36,6 +36,15 @@ public class Postagem {
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private Tema tema;
+	
+	public Postagem() {
+		super();
+	}
+
+	public Postagem(@NotNull @Size(min = 5, max = 100) String titulo, @NotNull @Size(min = 10, max = 500) String texto) {
+		this.titulo = titulo;
+		this.texto = texto;
+	}
 
 	public long getId() {
 		return id;
